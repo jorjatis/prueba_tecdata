@@ -1,0 +1,35 @@
+.cnt {
+  width: 100%;
+  padding: 0 24px;
+
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 28px;
+  }
+} 
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 24px;
+
+  &--12 {
+    @media (min-width: 699px) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__col {
+    position: relative;
+
+    &--6 {
+      @media (min-width: 699px) {
+        grid-column: span 6;
+      }
+    }
+  }
+}
+

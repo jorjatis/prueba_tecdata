@@ -6,7 +6,7 @@ const CopyWebpackPlugin  = require('copy-webpack-plugin');
 const styleChunksCacheGroups = require('./styleChunksCacheGroups.js');
 
 module.exports = {
-  devtool: 'source-map', // Desactivar en produccion o si la build es lenta
+  // devtool: 'source-map', // Desactivar en produccion o si la build es lenta
   entry: './src/config.js', // Punto de entrada de tu aplicación
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -32,10 +32,14 @@ module.exports = {
           MiniCssExtractPlugin.loader, // Extrae el CSS a un archivo separado
           'css-loader', // Resuelve @import y URL
           'postcss-loader',
-          'resolve-url-loader', // Para manejar los URLs relativos dentro del CSS
+          // 'resolve-url-loader', // Para manejar los URLs relativos dentro del CSS
           {
             loader: 'sass-loader',
-            options: { sassOptions: { sourceMapIncludeSources: true } }, // Manejo de SCSS
+            options: { 
+              sassOptions: { 
+                sourceMapIncludeSources: false,
+              } 
+            }, // Manejo de SCSS
           },
         ],
       },

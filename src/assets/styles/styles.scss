@@ -1,16 +1,20 @@
-@use './base/header';
+@use './globals';
 
-@font-face {
-  font-family: 'Basier Square Regular';
-  src: url('../fonts/basiersquare-regular/BasierSquare-Regular.woff2') format('woff2'),
-       url('../fonts/basiersquare-regular/BasierSquare-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+@use './reset';
+
+@use './grid';
+
+@use './footer';
+
+@use './separator';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
-body {
-  font-family: 'Basier Square Regular';
-  background-color: #f0f0f0;
-  color: #333;
+a {
+  text-decoration: none;
 }
-  
