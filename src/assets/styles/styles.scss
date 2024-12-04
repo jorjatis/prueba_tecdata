@@ -26,6 +26,11 @@
 
 a {
   text-decoration: none;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 img {

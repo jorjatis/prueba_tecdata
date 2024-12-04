@@ -11,6 +11,7 @@
     background: $cp1;
     border-radius: 8px;
     text-align: center;
+    transition: opacity .3s, padding-right .3s;
 
     span {
         font: 16px/24px $tp1;
@@ -19,12 +20,25 @@
         + .btn__icon {
             width: 18px;
             height: 15px;
+            transition: transform .3s;
         }
     }
 
     &__icon {
         width: 20px;
         height: auto;
+    }
+
+    &:has(span + .btn__icon) {
+        &:hover {
+            padding-right: 24px;
+
+            span {
+                + .btn__icon {
+                    transform: translateX(8px);
+                }
+            }
+        }
     }
 }
 
@@ -53,10 +67,25 @@
     background: $cb2;
     border: 0;
     cursor: pointer;
+    transition: scale .3s;
+
+    &:hover {
+        scale: 1.1;
+    }
 
     svg {
         width: 18px;
         height: auto;
+    }
+
+    &.is-liked {
+        background: $cp1;
+
+        svg {
+            path {
+                fill: $cb2;
+            }
+        }
     }
 }
 

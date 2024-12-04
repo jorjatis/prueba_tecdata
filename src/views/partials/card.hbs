@@ -1,7 +1,7 @@
 <article class="card">
     <div class="card__media">
         <img src="assets/images/card-item-01.jpg" alt="">
-        <button class="btn btn--like">
+        <button class="btn btn--like {{#if liked}}is-liked{{/if}}">
             {{> svgs/icon-heart }}
         </button>
     </div>
