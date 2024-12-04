@@ -3,7 +3,7 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin  = require('copy-webpack-plugin');
-const styleChunksCacheGroups = require('./styleChunksCacheGroups.js');
+const styleChunksCacheGroups = require('./styleChunksCacheGroups.js'); 
 
 module.exports = {
   // devtool: 'source-map', // Desactivar en produccion o si la build es lenta
