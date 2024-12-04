@@ -1,0 +1,72 @@
+@use './globals' as *;
+
+.btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 40px;
+    padding: 0 18px;
+    background: $cp1;
+    border-radius: 8px;
+    text-align: center;
+
+    span {
+        font: 16px/24px $tp1;
+        color: $cb2;
+
+        + .btn__icon {
+            width: 18px;
+            height: 15px;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: auto;
+    }
+}
+
+.btn--secondary {
+    background: $cg2;
+
+    span {
+        color: $cb1;
+    }
+}
+
+.btn--m {
+    min-height: 40px;
+}
+
+.btn--l {
+    min-height: 56px;
+}
+
+.btn--like {
+    border-radius: 100%;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    padding: 0;
+    background: $cb2;
+    border: 0;
+    cursor: pointer;
+
+    svg {
+        width: 18px;
+        height: auto;
+    }
+}
+
+.btn-cnt {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+        flex: 1 0 0;
+    }
+}

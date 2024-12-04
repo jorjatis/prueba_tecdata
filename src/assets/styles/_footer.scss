@@ -1,6 +1,6 @@
 @use './globals' as *;
 
-.foot {
+.footer {
     padding: 64px 0 32px;
     background: $cp1;
 
@@ -18,18 +18,38 @@
         }
     }
 
-    p {
-        font: 14px/20px $tp1;
-        color: $cb2;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
 
         @media (min-width: 699px) {
-            font-size: 16px;
-            line-height: 22px;
+            flex-direction: row;
+        }
+
+        > * {
+            @media (min-width: 699px) {
+                flex: 1 0 0;
+            }
+        }
+
+        p {
+            font: 14px/20px $tp1;
+            color: $cb2;
+    
+            @media (min-width: 699px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
     }
 
     &__perks {
         @media (min-width: 699px) {
+            columns: 2 auto;
+        }
+
+        @media (min-width: 1039px) {
             columns: 3 auto;
         }
 
@@ -45,7 +65,10 @@
             > a {
                 display: flex;
                 gap: 8px;
-                align-items: center;
+            }
+
+            .icon {
+                transform: translateY(3px);
             }
 
             svg {

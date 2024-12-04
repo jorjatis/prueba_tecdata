@@ -1,0 +1,68 @@
+<section class="contact">
+    <div class="cnt">
+        <div class="heading">
+          <h3>Contáctanos</h3>
+          <p>¡Contáctanos! Estamos aquí para ayudarte con cualquier consulta que tengas. No dudes en escribirnos y te responderemos lo más pronto posible.</p>
+        </div>
+
+        <div class="contact__content">
+          <div class="contact__media">
+            <img src="assets/images/contact.jpg" alt="">
+          </div>
+
+          <form class="form" action="">
+            <div class="form__row">
+              <div class="form__field">
+                <label for="name">
+                  <span>Nombre</span>
+                  <input type="text" name="name" id="" placeholder="Nombre">
+                </label>
+              </div>
+
+              <div class="form__field">
+                <label for="surname">
+                  <span>Apellidos</span>
+                  <input type="text" name="surname" id="" placeholder="Apellidos">
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label for="email">
+                  <span>Email</span>
+                  <input type="email" name="email" id="" placeholder="Email">
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label for="mensaje">
+                  <span>Mensaje</span>
+                  <textarea name="mensaje" id="" placeholder="Mensaje"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label for="terminos">
+                  <input type="checkbox" id="terminos" name="terminos" />
+                  <span>Acepto los <a href="#">Términos y condiciones</a></span>
+                </label>
+              </div>
+
+              <div class="form__field">
+                <button class="btn">
+                  <div class="btn__icon">
+                    {{> svgs/icon-send }}
+                  </div>
+                  <span>Enviar</span>
+                </button>
+              </div>                
+            </div>
+          </form>
+        </div>
+    </div>
+</section>

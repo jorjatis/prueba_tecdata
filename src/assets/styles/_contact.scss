@@ -1,0 +1,20 @@
+@use './globals' as *;
+
+.contact {
+    .heading {
+        margin-bottom: 60px;
+    }
+
+    &__content {
+        display: flex;
+        gap: 64px;
+
+        > * {
+            flex: 1 0 0;
+        }
+    }
+
+    &__media {
+        border-radius: 24px;
+    }
+}
