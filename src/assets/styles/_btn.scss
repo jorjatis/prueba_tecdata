@@ -9,8 +9,10 @@
     min-height: 40px;
     padding: 0 18px;
     background: $cp1;
+    border: 0;
     border-radius: 8px;
     text-align: center;
+    cursor: pointer;
     transition: opacity .3s, padding-right .3s;
 
     span {
@@ -27,6 +29,10 @@
     &__icon {
         width: 20px;
         height: auto;
+    }
+
+    &:hover {
+        opacity: .8;
     }
 
     &:has(span + .btn__icon) {

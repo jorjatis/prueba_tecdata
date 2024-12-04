@@ -4,12 +4,14 @@
 
 @use './grid';
 
+@use './nav';
 @use './separator';
 @use './heading';
 @use './btn';
 @use './tags';
 @use './card';
 
+@use './hero';
 @use './featured-main';
 @use './featured-details';
 @use './card-grid';
