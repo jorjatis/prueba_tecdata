@@ -1,16 +1,31 @@
-@use './base/header';
+// Estilos globales que llevarse al resto como variables, mixins, functions...
+@use './abstracts/globals';
 
-@font-face {
-  font-family: 'Basier Square Regular';
-  src: url('../fonts/basiersquare-regular/BasierSquare-Regular.woff2') format('woff2'),
-       url('../fonts/basiersquare-regular/BasierSquare-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+// Estilos base de la página
+@use './base/reset';
+@use './base/base';
 
-body {
-  font-family: 'Basier Square Regular';
-  background-color: #f0f0f0;
-  color: #333;
-}
-  
+// Estilos de utilidad, hacks...
+@use './utils/utils';
+
+// Estilos de layouts
+@use './layout/grid';
+@use './layout/container';
+
+// Estilos de components
+@use './components/form';
+@use './components/nav';
+@use './components/separator';
+@use './components/heading';
+@use './components/btn';
+@use './components/tags';
+@use './components/card';
+
+// Estilos de secciones
+@use './sections/header';
+@use './sections/footer';
+@use './sections/hero';
+@use './sections/featured-main';
+@use './sections/featured-details';
+@use './sections/plans';
+@use './sections/contact';

@@ -3,17 +3,21 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin  = require('copy-webpack-plugin');
-const styleChunksCacheGroups = require('./styleChunksCacheGroups.js');
+const styleChunksCacheGroups = require('./styleChunksCacheGroups.js'); 
 
 module.exports = {
-  devtool: 'source-map', // Desactivar en produccion o si la build es lenta
+  // devtool: 'source-map', // Desactivar en produccion o si la build es lenta
   entry: './src/config.js', // Punto de entrada de tu aplicación
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    chunkFilename: '[name].js',
     clean: true, // Limpia el directorio 'dist' antes de generar los archivos
     publicPath: '/', // Se utiliza para los enlaces públicos de los archivos generados
+  },
+  resolve: {
+    alias: {
+      '@styles': path.resolve(__dirname, 'src/styles'), // Alias para la carpeta 'styles'
+    },
+    extensions: ['.js', '.scss', '.css'],
   },
   module: {
     rules: [
@@ -32,10 +36,14 @@ module.exports = {
           MiniCssExtractPlugin.loader, // Extrae el CSS a un archivo separado
           'css-loader', // Resuelve @import y URL
           'postcss-loader',
-          'resolve-url-loader', // Para manejar los URLs relativos dentro del CSS
+          // 'resolve-url-loader', // Para manejar los URLs relativos dentro del CSS
           {
             loader: 'sass-loader',
-            options: { sassOptions: { sourceMapIncludeSources: true } }, // Manejo de SCSS
+            options: { 
+              sassOptions: { 
+                sourceMapIncludeSources: false,
+              } 
+            }, // Manejo de SCSS
           },
         ],
       },
@@ -90,7 +98,11 @@ module.exports = {
         { 
           from: path.join('src', 'assets', 'images'), 
           to: path.join('assets', 'images')
-        }
+        },
+        { 
+          from: path.join('src', 'js'), 
+          to: path.join('assets', 'js') 
+        },
       ]
     }),
   ],

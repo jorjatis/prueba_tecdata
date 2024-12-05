@@ -1,0 +1,122 @@
+<section class="plans">
+  <div class="cnt">
+    {{> components/heading
+      title="Flexible plans for everyone"
+      desc="Choose the best plan for your needs"
+    }}
+
+    <div class="plans__table">
+      <div class="plans__feat-list" aria-hidden="true">
+        <div class="plans__feat">
+          <span>Feature 1</span>
+        </div>
+        <div class="plans__feat">
+          <span>Feature 2</span>
+        </div>
+        <div class="plans__feat">
+          <span>Feature 3</span>
+        </div>
+        <div class="plans__feat">
+          <span>Feature 4</span>
+        </div>
+        <div class="plans__feat">
+          <span>Feature 5</span>
+        </div>
+        <div class="plans__feat">
+          <span>Feature 6</span>
+        </div>
+      </div>
+      <div class="plans__opt-list">
+        <div class="plans__opt">
+          <div class="plans__opt-header">
+            <span class="plans__opt-level">Basic</span>
+            <span class="plans__opt-price">$9.99</span>
+            {{> components/btn
+                btnIsLink=true
+                btnClasses="btn--bdr btn--secondary"
+                btnText="Select"
+                btnAriaLabel="Selecciona el plan básico"
+            }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+        </div>
+        <div class="plans__opt plans__opt--featured">
+          <div class="plans__opt-header">
+            <span class="plans__opt-level">Pro</span>
+            <span class="plans__opt-price">$19.99</span>
+            {{> components/btn
+                btnIsLink=true
+                btnText="Start with Plus"
+                btnAriaLabel="Selecciona el plan plus"
+            }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+        </div>
+        <div class="plans__opt">
+          <div class="plans__opt-header">
+            <span class="plans__opt-level">Entreprise</span>
+            <span class="plans__opt-price">$29.99</span>
+            {{> components/btn
+                btnIsLink=true
+                btnClasses="btn--bdr btn--secondary"
+                btnText="Select"
+                btnAriaLabel="Selecciona el plan enterprise"
+            }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+          <div class="plans__opt-feat">
+            {{> icons/icon-tick }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+@use '../abstracts/globals' as *;
+
+.contact {
+    .heading {
+        margin-bottom: 60px;
+    }
+
+    &__cnt {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (min-width: $screen-xs) {
+            flex-direction: row;
+            gap: 64px;
+            align-items: center;
+        }
+
+        > * {
+            @media (min-width: $screen-xs) {
+                flex: 1 0 0;
+            }
+        }
+    }
+
+    &__media {
+        height: 234px;
+        border-radius: 16px;
+
+        @media (min-width: $screen-xs) {
+            height: auto;
+            border-radius: 24px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 16px;           
+
+            @media (min-width: $screen-xs) {
+                border-radius: 24px;
+            }
+        }
+    }
+
+    &__form {
+        .form {
+            max-width: 620px;
+            margin: 0 auto;
+        }
+    }
+}

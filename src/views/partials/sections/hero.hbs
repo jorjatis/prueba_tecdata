@@ -1,0 +1,27 @@
+<section class="hero">
+    <div class="hero__bg">
+        <img src="assets/images/hero-bg.jpg" aria-hidden="true">
+    </div>
+    
+    <div class="hero__cnt">
+        <h2 class="hero__title">Explora el mundo: Tu guía de viajes perfecta</h2>  
+
+        {{> components/separator 
+            separatorClasses="sep--icon sep--icon-center"
+            separatorHasIcon=true
+            iconCirclePerson=true
+        }}
+
+        <h3 class="hero__sub">Explora destinos increíbles y vive aventuras inolvidables.</h3>
+        
+        <p class="hero__desc">Ofrecemos una amplia gama de destinos, desde playas paradisíacas hasta montañas majestuosas, para que encuentres el lugar perfecto para tu próxima escapada.</p>
+        
+        {{> components/btn
+            btnIsLink=true
+            btnClasses="btn--l"
+            btnText="Descubre"
+            btnHasArrowRight=true
+            btnAriaLabel="Descubre los mejores destinos de viaje"
+        }}
+    </div>
+</section>

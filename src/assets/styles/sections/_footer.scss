@@ -1,0 +1,110 @@
+@use '../abstracts/globals' as *;
+
+.footer {
+    padding: 64px 0 32px;
+    background: $cp1;
+
+    &__logo {
+        margin: 0 0 16px;
+        text-align: center;
+
+        @media (min-width: $screen-xs) {
+            text-align: left;
+        }
+
+        svg {
+            width: 160px;
+            height: 24px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (min-width: $screen-xs) {
+            flex-direction: row;
+        }
+
+        > * {
+            @media (min-width: $screen-xs) {
+                flex: 1 0 0;
+            }
+        }
+
+        p {
+            font: px-rem(14)/px-rem(20) $tp1;
+            color: $cb2;
+    
+            @media (min-width: $screen-xs) {
+                font-size: px-rem(16);
+                line-height: px-rem(22);
+            }
+        }
+    }
+
+    &__links {
+        @media (min-width: $screen-xs) {
+            columns: 2 auto;
+        }
+
+        @media (min-width: $screen-sm) {
+            columns: 3 auto;
+        }
+
+        li {
+            &:nth-child(5n):not(:last-child) {
+                margin-bottom: 24px;
+                
+                @media (min-width: $screen-xs) {
+                    margin-bottom: 0;
+                }
+            }
+
+            > a {
+                display: flex;
+                gap: 8px;
+            }
+
+            svg {
+                width: 12px;
+                height: 10px;
+                margin-top: 8px;
+            }
+
+            span {
+                font: px-rem(16)/px-rem(24) $tp1;
+                color: $cb2;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (min-width: $screen-xs) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;    
+        }
+    }
+
+    &__copy {
+        font: px-rem(14)/px-rem(20) $tp1;
+        color: $cb2;
+    }
+
+    &__social {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use '../abstracts/globals' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+img {
+    border-style: none;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 64px 0;
+
+    @media (min-width: $screen-xs) {
+        padding: 80px 0;
+    }
+}

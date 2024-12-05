@@ -1,0 +1,110 @@
+@use '../abstracts/globals' as *;
+
+.btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 40px;
+    padding: 0 18px;
+    background: $cp1;
+    border: 0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity .3s, padding-right .3s;
+
+    span {
+        font: px-rem(16)/1 $tp1;
+        font-weight: 400;
+        color: $cb2;
+
+        + .btn__icon {
+            width: 18px;
+            height: 15px;
+            transition: transform .3s;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: auto;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &:has(span + .btn__icon) {
+        &:hover {
+            padding-right: 24px;
+
+            span {
+                + .btn__icon {
+                    transform: translateX(8px);
+                }
+            }
+        }
+    }
+}
+
+.btn--secondary {
+    background: $cg2;
+
+    span {
+        color: $cb1;
+    }
+}
+
+.btn--m {
+    min-height: 40px;
+}
+
+.btn--l {
+    min-height: 56px;
+}
+
+.btn--like {
+    border-radius: 100%;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    padding: 0;
+    background: $cb2;
+    border: 0;
+    cursor: pointer;
+    transition: scale .3s;
+    will-change: transform;
+
+    &:hover {
+        scale: 1.2;
+        opacity: 1;
+    }
+
+    svg {
+        width: 18px;
+        height: auto;
+    }
+
+    &.is-liked {
+        background: $cp1;
+
+        svg {
+            path {
+                fill: $cb2;
+            }
+        }
+    }
+}
+
+.btn-cnt {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+        flex: 1 0 0;
+    }
+}

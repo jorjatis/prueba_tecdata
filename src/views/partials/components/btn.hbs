@@ -1,0 +1,23 @@
+{{#if btnIsLink}}
+<a href="#" class="btn {{#if btnClasses}}{{btnClasses}}{{/if}}" role="button" {{#if btnAriaLabel}}aria-label="{{btnAriaLabel}}"{{/if}}>
+{{else if btnIsButton}}
+<button {{#if btnTypeSubmit}}type="submit"{{/if}} class="btn {{#if btnClasses}}{{btnClasses}}{{/if}}" {{#if btnAriaLabel}}aria-label="{{btnAriaLabel}}"{{/if}}>
+{{/if}}
+    {{#if btnHasIcon}}
+    <div class="btn__icon">
+        {{> icon }}
+    </div>
+    {{/if}}
+    {{#if btnText}}
+    <span>{{btnText}}</span>
+    {{/if}}
+    {{#if btnHasArrowRight}}
+    <div class="btn__icon">
+        {{> icons/icon-arrow-right }}
+    </div>
+    {{/if}}
+{{#if btnIsLink}}
+</a>
+{{else if btnIsButton}}
+</button>
+{{/if}}

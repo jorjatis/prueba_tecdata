@@ -1,0 +1,90 @@
+@use '../abstracts/globals' as *;
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 704px;
+    padding: 0 24px;
+
+    @media (min-width: $screen-xs) {
+        height: 768px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $cb1;
+            opacity: .5;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__cnt {
+        position: relative;
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        align-items: center;
+        margin: 72px auto 0;
+        text-align: center;
+        z-index: 1;
+
+        @media (min-width: $screen-xs) {
+            gap: 32px;
+        }
+    }
+
+    &__title {
+        font: px-rem(32)/px-rem(38) $tp1;
+        font-weight: 700;
+        color: $cb2;
+
+        @media (min-width: $screen-xs) {
+            font-size: px-rem(61);
+            line-height: px-rem(73);
+        }
+    }
+
+    &__sub {
+        font: px-rem(24)/px-rem(29) $tp1;
+        font-weight: 700;
+        color: $cb2;
+
+        @media (min-width: $screen-xs) {
+            font-size: px-rem(31);
+            line-height: px-rem(43);
+        }
+    }
+
+    &__desc {
+        font: px-rem(16)/px-rem(22) $tp1;
+        font-weight: 400;
+        color: $cb2;
+    }
+
+    .btn {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

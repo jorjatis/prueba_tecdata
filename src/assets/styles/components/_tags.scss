@@ -1,0 +1,19 @@
+@use '../abstracts/globals' as *;
+
+.tags {
+    display: flex;
+    gap: 8px;
+
+    li {
+        min-height: 24px;
+        padding: 4px 8px;
+        background: $cg2;
+        border-radius: 24px;
+
+        span {
+            font: px-rem(12)/px-rem(16) $tp1;
+            font-weight: 400;
+            color: $cg1;
+        }
+    }
+}

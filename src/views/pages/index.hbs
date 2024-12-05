@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}}</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <meta name="description" content="Reserva tu estancia en los mejores hoteles en destinos exclusivos. Disfruta de ofertas únicas, comodidades de lujo y un servicio excepcional en tus vacaciones.">
+  <meta name="keywords" content="hoteles, reserva, vacaciones, lujo, destinos turísticos, alojamiento, hoteles de playa, hoteles de montaña, ofertas de hoteles">
+  <meta name="author" content="Manifest">
+  <meta property="og:title" content="Hoteles en destinos exclusivos">
+  <meta property="og:description" content="Reserva tu alojamiento en destinos turísticos como la playa, montaña y más. Encuentra ofertas y promociones en hoteles de lujo.">
+  <meta property="og:image" content="assets/images/manifest-logo.png">
+  <meta property="og:url" content="https://www.manifest.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hoteles en destinos exclusivos">
+  <meta name="twitter:description" content="Encuentra los mejores hoteles en destinos turísticos, ideales para tus vacaciones. Reserva ya tu hotel y disfruta de ofertas exclusivas.">
+  <meta name="twitter:image" content="assets/images/manifest-logo.png">
+  <meta name="apple-mobile-web-app-title" content="Tu Hotel">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/images/manifest-icon.ico" type="image/x-icon">  
+  <title>Reserva tu Hotel - Destinos Exclusivos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-  asdasd
-  {{> header}} <!-- Parcial del encabezado -->
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contacto</a>
-  <a href="/blog.html">Blog</a>
-  <a href="/cosas/cosa1.html">Cosa 1</a>
+  {{> sections/header }}
 
-  La imagen
-  <img src="assets/images/default.jpg" alt="Imagen de ejemplo">
+  <main>
+    {{> sections/hero }}
 
-  <img src="assets/images/icons/chapa.jpg" alt="Imagen de ejemplo">
+    {{> sections/featured-main }}
 
-  <p>Listado:</p>
-  <ul>
-    {{#each items}}
-      <li>
-        <h2>{{name}}</h2>
-        <p>{{description}}</p>
-      </li>
-    {{/each}}
-  </ul>
+    {{> sections/featured-details }}
 
-  <p>Listado test each items:</p>
-  {{> test-each }}
+    {{> sections/card-grid }}
 
-  {{> footer}} <!-- Parcial del pie de página -->
+    {{> sections/plans }}
+
+    {{> sections/contact }}
+  </main>
+
+  {{> sections/footer }}
+
+  <script src="assets/js/scripts.js"></script>
+
 </body>
+
 </html>

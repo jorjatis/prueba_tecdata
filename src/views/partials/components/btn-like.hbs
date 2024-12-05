@@ -1,0 +1,7 @@
+<button class="btn btn--like {{#if isLiked}}is-liked{{/if}}" 
+        aria-pressed="{{#if isLiked}}true{{else}}false{{/if}}" 
+        aria-label="{{#if isLiked}}Quitar me gusta{{else}}Añadir a me gusta{{/if}}">
+    {{> components/icon
+        iconHeart=true
+    }}
+</button>

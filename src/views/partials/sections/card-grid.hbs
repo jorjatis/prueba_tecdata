@@ -1,0 +1,52 @@
+<section class="card-grid">
+    <div class="cnt">
+        {{> components/heading
+            title="Lorem ipsum dolor sit"
+            desc="Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+        }}
+        
+        <div class="grid grid--2 grid--4-fsm" role="list">
+            <div class="grid__col" role="listitem">
+                {{> components/card 
+                    isLiked=true
+                    cardMediaFile="card-item-01.jpg"
+                }}
+            </div>
+            <div class="grid__col" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-02.jpg"
+                }}
+            </div>
+            <div class="grid__col" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-03.jpg"
+                }}
+            </div>
+            <div class="grid__col" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-04.jpg"
+                }}
+            </div>
+            <div class="grid__col hide-xs" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-05.jpg"
+                }}
+            </div>
+            <div class="grid__col hide-xs" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-06.jpg"
+                }}
+            </div>
+            <div class="grid__col hide-xs" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-07.jpg"
+                }}
+            </div>
+            <div class="grid__col hide-xs" role="listitem">
+                {{> components/card 
+                    cardMediaFile="card-item-08.jpg"
+                }}
+            </div>
+        </div>
+    </div>
+</section>
