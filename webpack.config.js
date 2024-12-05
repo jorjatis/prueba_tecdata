@@ -10,10 +10,14 @@ module.exports = {
   entry: './src/config.js', // Punto de entrada de tu aplicación
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    chunkFilename: '[name].js',
     clean: true, // Limpia el directorio 'dist' antes de generar los archivos
     publicPath: '/', // Se utiliza para los enlaces públicos de los archivos generados
+  },
+  resolve: {
+    alias: {
+      '@styles': path.resolve(__dirname, 'src/styles'), // Alias para la carpeta 'styles'
+    },
+    extensions: ['.js', '.scss', '.css'],
   },
   module: {
     rules: [
@@ -94,7 +98,11 @@ module.exports = {
         { 
           from: path.join('src', 'assets', 'images'), 
           to: path.join('assets', 'images')
-        }
+        },
+        { 
+          from: path.join('src', 'js'), 
+          to: path.join('assets', 'js') 
+        },
       ]
     }),
   ],

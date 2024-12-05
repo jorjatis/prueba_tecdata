@@ -1,0 +1,11 @@
+@use '../abstracts/globals' as *;
+
+.featured-main {
+    .grid {
+        img {
+            height: 288px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+}

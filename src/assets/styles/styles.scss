@@ -1,57 +1,31 @@
-@use './globals';
+// Estilos globales que llevarse al resto como variables, mixins, functions...
+@use './abstracts/globals';
 
-@use './reset';
+// Estilos base de la página
+@use './base/reset';
+@use './base/base';
 
-@use './grid';
+// Estilos de utilidad, hacks...
+@use './utils/utils';
 
-@use './nav';
-@use './separator';
-@use './heading';
-@use './btn';
-@use './tags';
-@use './card';
+// Estilos de layouts
+@use './layout/grid';
+@use './layout/container';
 
-@use './hero';
-@use './featured-main';
-@use './featured-details';
-@use './card-grid';
-@use './pricing';
-@use './contact';
-@use './footer';
+// Estilos de components
+@use './components/form';
+@use './components/nav';
+@use './components/separator';
+@use './components/heading';
+@use './components/btn';
+@use './components/tags';
+@use './components/card';
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-}
-
-a {
-  text-decoration: none;
-  transition: opacity .3s;
-
-  &:hover {
-    opacity: .8;
-  }
-}
-
-img {
-  border-style: none;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-section {
-  padding: 64px 0;
-
-  @media (min-width: 699px) {
-    padding: 80px 0;
-  }
-}
-
-.hide-xs {
-  @media (max-width: 699px) {
-    display: none;
-  }
-}
+// Estilos de secciones
+@use './sections/header';
+@use './sections/footer';
+@use './sections/hero';
+@use './sections/featured-main';
+@use './sections/featured-details';
+@use './sections/plans';
+@use './sections/contact';

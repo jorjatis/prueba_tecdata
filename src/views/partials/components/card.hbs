@@ -1,0 +1,32 @@
+<article class="card">
+    <figure class="card__media">
+        <img src="assets/images/{{cardMediaFile}}" alt="">
+        {{> components/btn-like }}
+    </figure>
+    <div class="card__cnt">
+        {{> components/tags
+            tags3Item=true
+        }}
+        <time class="card__date" datetime="2022-05-10">10/05/2022</time>
+        <h2 class="card__title">Sed donec blandit amet fames morbi donec tincidunt.</h2>
+        <p class="card__desc">Velit non id lacus eros montes. Arcu quis facilisis ut sed tempor vitae non adipiscing. Quam quis arcu ac in vulputate diam at tellus urna. Amet mi elementum morbi malesuada ante gravida faucibus dignissim. Nulla eget vitae egestas purus arcu massa aliquam massa.</p>
+        <div class="card__price">
+            <span class="card__price-txt">Desde</span>
+            <span class="card__price-qty">2.031€</span>
+        </div>
+        <div class="btn-cnt">
+            {{> components/btn
+                btnIsLink=true
+                btnClasses="btn--m btn--secondary"
+                btnText="Call to Action"
+                btnAriaLabel="Obtén más información sobre esta oferta"
+            }}
+            {{> components/btn
+                btnIsLink=true
+                btnClasses="btn--m"
+                btnText="Call to Action"
+                btnAriaLabel="Reserva ahora este paquete"
+            }}
+        </div>
+    </div>
+</article>

@@ -1,0 +1,54 @@
+@use '../abstracts/globals' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 24px;
+
+  &--2 {
+    @media (min-width: $screen-xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--4 {
+    @media (min-width: $screen-xs) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-fsm {
+      @media (min-width: $screen-sm) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  &--12 {
+    @media (min-width: $screen-xs) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__col {
+    position: relative;
+
+    &--4 {
+      @media (min-width: $screen-xs) {
+        grid-column: span 4;
+      }
+    }
+
+    &--6 {
+      @media (min-width: $screen-xs) {
+        grid-column: span 6;
+      }
+    }
+
+    &--12 {
+      @media (min-width: $screen-xs) {
+        grid-column: span 12;
+      }
+    }
+  }
+}
+

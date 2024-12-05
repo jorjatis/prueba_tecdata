@@ -1,0 +1,21 @@
+<nav class="nav" aria-label="Navegación principal">
+    <div class="nav__logo">
+        {{> icons/logo-manifest }}
+    </div>
+
+    <button class="nav__toggle"
+            aria-label="Abrir navegación" 
+            aria-expanded="false" 
+            aria-controls="nav-list">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+    </button>
+
+    <ul class="nav__list" id="nav-list">
+        <li class="is-active"><a href="#" aria-current="page"><span>Inicio</span></a></li>
+        <li><a href="#"><span>Nosotros</span></a></li>
+        <li><a href="#"><span>Viajes</span></a></li>
+        <li><a href="#"><span>Contacto</span></a></li>
+    </ul>
+</nav>

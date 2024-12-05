@@ -1,0 +1,60 @@
+@use '../abstracts/globals' as *;
+
+.card {
+    background: $cb2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    &__media {
+        position: relative;
+        
+        .btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    &__cnt {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        background: $cb2;
+    }
+
+    &__date {
+        font: px-rem(12)/px-rem(16) $tp1;
+        font-weight: 400;
+        color: $cg1;
+    }
+
+    &__title {
+        font: px-rem(20)/px-rem(28) $tp1;
+        font-weight: 700;
+        color: $cg1;
+    }
+
+    &__desc {
+        font: px-rem(14)/px-rem(20) $tp1;
+        font-weight: 400;
+        color: $cg1;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-txt {
+            font: px-rem(16)/px-rem(22) $tp1;
+            font-weight: 400;
+            color: $cg1;
+        }
+
+        &-qty {
+            font: px-rem(20)/px-rem(28) $tp1;
+            font-weight: 700;
+            color: $cg1;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+<section class="contact">
+  <div class="cnt">
+    
+    {{> components/heading
+        title="Contáctanos"
+        desc="¡Contáctanos! Estamos aquí para ayudarte con cualquier consulta que tengas. No dudes en escribirnos y te
+        responderemos lo más pronto posible."
+    }}
+   
+    <div class="contact__cnt">
+      <div class="contact__media">
+        <img src="assets/images/contact.jpg" alt="" aria-hidden="true">
+      </div>
+
+      <div class="contact__form">
+        <form class="form" aria-labelledby="form-heading">
+          <h2 id="form-heading" class="hide">Formulario de contacto</h2>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Nombre" required aria-describedby="name-acc">
+              <small id="name-description" class="hide">Por favor, ingresa tu nombre completo.</small>
+            </div>
+            <div class="form__group">
+              <label for="surname">Apellidos</label>
+              <input type="text" id="surname" name="surname" placeholder="Apellidos" required aria-describedby="surname-acc">
+              <small id="surname-acc" class="hide">Por favor, ingresa tus apellidos completos.</small>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" required aria-describedby="email-acc">
+              <small id="email-acc" class="hide">Tu dirección de correo electrónico para poder responder.</small>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Mensaje" rows="4" required aria-describedby="message-acc"></textarea>
+              <small id="message-acc" class="hide">Escribe aquí tu mensaje o consulta.</small>
+            </div>
+          </div>
+          <div class="form__row form__row--last">
+            <fieldset class="form__check">
+              <input type="checkbox" id="terminos" name="terminos" required>
+              <label for="terminos">Acepto los <a href="#" aria-label="Leer los términos y condiciones">Términos y condiciones</a></label>
+            </fieldset>
+
+            {{> components/btn
+                btnIsButton=true
+                btnTypeSubmit=true
+                btnHasIcon=true
+                iconPaperPlane=true
+                btnText="Enviar"
+                btnAriaLabel="Enviar mensaje de contacto"
+            }}
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

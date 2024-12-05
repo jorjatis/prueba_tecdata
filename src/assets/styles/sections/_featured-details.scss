@@ -1,0 +1,63 @@
+@use '../abstracts/globals' as *;
+
+.featured-details {
+    width: 100%;
+    padding: 0;
+
+    &__i {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+
+        @media (min-width: $screen-xs) {
+            flex-direction: row;
+            gap: 0;
+            height: 411px;
+        }
+
+        + .featured-details__i {
+            margin: 32px 0 0;
+
+            @media (min-width: $screen-xs) {
+                margin: 0;
+            }
+        }
+
+        &:nth-child(even) {
+            @media (min-width: $screen-xs) {
+                flex-direction: row-reverse;
+            }
+        }
+        
+        &-blk {
+            flex: 1 0 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .heading {
+                gap: 32px;
+                margin: 0;
+
+                @media (min-width: $screen-xs) {
+                    justify-content: flex-start;
+                    max-width: 546px;
+                    padding: 0 24px;
+                    text-align: left;
+                    box-sizing: content-box;
+                }
+            }
+
+            img {
+                height: 238px;
+                object-fit: cover;
+                border-radius: 16px;
+
+                @media (min-width: $screen-xs) {
+                    height: 100%;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

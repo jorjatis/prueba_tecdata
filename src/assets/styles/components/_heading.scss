@@ -1,0 +1,28 @@
+@use '../abstracts/globals' as *;
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 660px;
+    margin: 0 0 32px;
+
+    @media (min-width: $screen-xs) {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &__title {
+        font: px-rem(31)/px-rem(43) $tp1;
+        font-weight: 700;
+        color: $cp1;
+    }
+
+    &__desc {
+        font: px-rem(16)/px-rem(22) $tp1;
+        font-weight: 400;
+        color: $cg1;
+    }
+}

@@ -1,0 +1,12 @@
+@use '../abstracts/globals' as *;
+
+
+.hide {
+    display: none;
+    
+    &-xs {
+        @media (max-width: $screen-xs) {
+            display: none;
+        }
+    }
+}
